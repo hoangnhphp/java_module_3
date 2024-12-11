@@ -29,7 +29,7 @@ create unique index product_code_unique on products(productCode);
 
 create index idx_product_name_product_price on products(productName, productPrice);
 
-EXPLAIN SELECT * FROM products where productName = "SP08";
+EXPLAIN SELECT * FROM products where productName = "SP08" and productPrice = 16000000;
 
 create view products_view as 
 select productCode, productName, productPrice, productStatus from products;
